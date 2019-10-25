@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <title>Vector Space Model</title>
 </head>
 <body>
@@ -18,7 +20,50 @@
                 <option value="fiat">Fiat</option>
                 <option value="audi">Audi</option>
               </select>
+              <button id= "btn_search" type=submit >Search</button>
         </form>
     </div>  
+    <div class="results">
+        <h2>Found Results:</h2>
+        <table id="tableResults">
+            <thead>
+                <tr>
+                    <th>No. Document</th>
+                    <th>Title</th> 
+                    <th>Match</th>
+                    <th>Ranking Coefficient</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td> 
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>6</td> 
+                    <td>7</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>10</td> 
+                    <td>11</td>
+                    <td>12</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="buttons">
+            <a href="#" class="button">Get Precision & Recall</a>
+            <a href="#" class="button">Clear</a>
+        </div>
+    </div>
+    <div class="graphs">
+        <h2>Graph:</h2>
+        <img src="logo.png" alt="Logo">
+        <a href="#" class="button">Save graph</a>
+    </div>
 </body>
 </html>
