@@ -1,0 +1,110 @@
+.I 1399
+.T
+experimental investigation of the aerodynamics of a
+wing in a slipstream .
+.A
+brenckman,m.
+.B
+j. ae. scs. 25, 1958, 324.
+.W
+experimental investigation of the aerodynamics of a
+wing in a slipstream .
+  an experimental study of a wing in a propeller slipstream was
+made in order to determine the spanwise distribution of the lift
+increase due to slipstream at different angles of attack of the wing
+and at different free stream to slipstream velocity ratios .  the
+results were intended in part as an evaluation basis for different
+theoretical treatments of this problem .
+  the comparative span loading curves, together with
+supporting evidence, showed that a substantial part of the lift increment
+produced by the slipstream was due to a /destalling/ or
+boundary-layer-control effect .  the integrated remaining lift
+increment, after subtracting this destalling lift, was found to agree
+well with a potential flow theory .
+  an empirical evaluation of the destalling effects was made for
+the specific configuration of the experiment .
+.I 2
+.T
+simple shear flow past a flat plate in an incompressible fluid of small
+viscosity .
+.A
+ting-yili
+.B
+department of aeronautical engineering, rensselaer polytechnic
+institute
+troy, n.y.
+.W
+simple shear flow past a flat plate in an incompressible fluid of small
+viscosity .
+in the study of high-speed viscous flow past a two-dimensional body it
+is usually necessary to consider a curved shock wave emitting from the
+nose or leading edge of the body .  consequently, there exists an
+inviscid rotational flow region between the shock wave and the boundary
+layer .  such a situation arises, for instance, in the study of the
+hypersonic viscous flow past a flat plate .  the situation is somewhat
+different from prandtl's classical boundary-layer problem . in prandtl's
+original problem the inviscid free stream outside the boundary layer is
+irrotational while in a hypersonic boundary-layer problem the inviscid
+free stream must be considered as rotational .  the possible effects of
+vorticity have been recently discussed by ferri and libby .  in the
+present paper, the simple shear flow past a flat plate in a fluid of small
+viscosity is investigated .  it can be shown that this problem can again
+be treated by the boundary-layer approximation, the only novel feature
+being that the free stream has a constant vorticity .  the discussion
+here is restricted to two-dimensional incompressible steady flow .
+.I 3
+.T
+the boundary layer in simple shear flow past a flat plate .
+.A
+m. b. glauert
+.B
+department of mathematics, university of manchester, manchester,
+england
+.W
+the boundary layer in simple shear flow past a flat plate .
+the boundary-layer equations are presented for steady
+incompressible flow with no pressure gradient .
+.I 4
+.T
+approximate solutions of the incompressible laminar
+boundary layer equations for a plate in shear flow .
+.A
+yen,k.t.
+.B
+j. ae. scs. 22, 1955, 728.
+.W
+approximate solutions of the incompressible laminar
+boundary layer equations for a plate in shear flow .
+  the two-dimensional steady boundary-layer
+problem for a flat plate in a
+shear flow of incompressible fluid is considered .
+solutions for the boundary-
+layer thickness, skin friction, and the velocity
+distribution in the boundary
+layer are obtained by the karman-pohlhausen
+technique .  comparison with
+the boundary layer of a uniform flow has also
+been made to show the effect of
+vorticity .
+.I 1
+.T
+similarity laws for stressing heated wings .
+.A
+tsien,h.s.
+.B
+j. ae. scs. 20, 1953, 1.
+.W
+similarity laws for stressing heated wings .
+  it will be shown that the differential equations for a heated
+plate with large temperature gradient and for a similar plate at
+constant temperature can be made the same by a proper
+modification of the thickness and the loading for the isothermal plate .
+this fact leads to the result that the stresses in the heated plate
+can be calculated from measured strains on the unheated plate by
+a series of relations, called the /similarity laws ./  the
+application of this analog theory to solid wings under aerodynamic
+heating is discussed in detail .  the loading on the unheated analog
+wing is, however, complicated and involves the novel concept
+of feedback and /body force/ loading .  the problem of stressing
+a heated box-wing structure can be solved by the same analog
+method and is briefly discussed .
