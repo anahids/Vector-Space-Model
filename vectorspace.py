@@ -1,6 +1,7 @@
 import re
 import math
 import operator
+import json
 
 def processQuery(query):
     letters = re.sub(r'[^a-z]', ' ', query)
@@ -82,8 +83,8 @@ def queryToVector(query, idfDictionary):
 def ranking(queryVector, docsVectors):
     ranks = []
     for doc,index in zip(docsVectors,range(len(docsVectors))):
-        ranks.append((index,dot(queryVector,doc)))
-    ranks.sort(key = operator.itemgetter(1),reverse = True)
+        ranks.append([index,dot(queryVector,doc)])
+    #ranks.sort(key = operator.itemgetter(1),reverse = True)
     return ranks
 
 def getAndCleanTitles(docs):
@@ -94,10 +95,37 @@ def getAndCleanTitles(docs):
         cleanTitles = [title.strip() for title in onlyLetters]
         return cleanTitles
 
-def main():
-    query = "what similarity laws must be obeyed when constructing aeroelastic models of heated high speed aircraft ."
-    cleanQuery = processQuery(query)
+def formattingResult(rank, titlesDocuments, contentsDocuments):
+    titles = []
+    contents = []
+    keys = ["No. Document","Title","Sentence","Ranking coefficient"]
+    r = []
 
+    for title in enumerate(titlesDocuments):
+        titles.append(list(title))
+    
+    for content in enumerate(contentsDocuments):
+        contents.append(list(content))
+
+    for title in titles:
+        for content in contents:
+            if title[0] == content[0]: 
+                title.append(content[1])
+    
+    for vector in rank:
+        for title in titles:
+            if vector[0] == title[0]:
+                title.append(vector[1])
+
+    results = sorted(titles, key = lambda x: x[3], reverse=True)
+
+    for result in results:
+        r.append(dict(zip(keys, result)))
+
+    return r
+
+def start(query):
+    cleanQuery = processQuery(query)
     docs = processDocuments()
     contentsDocuments = getAndCleanContent(docs)
     invertedI = invertedIndex(contentsDocuments)
@@ -107,9 +135,13 @@ def main():
     queryVector = queryToVector(cleanQuery, idfDictionary)
     rank = ranking(queryVector, docsVectors)
     titlesDocuments = getAndCleanTitles(docs)
-    print(titlesDocuments) # imprime la lista que tiene los titulos
-    print(contentsDocuments)  # imprime la lista de donde hace match la query con los documentos
-    print(rank) # imprime una lista de tuplas. Cada tupla tiene lo del ranking y el indice (a cual documento corresponde), el ranking esta ordenado
+    result = formattingResult(rank, titlesDocuments, contentsDocuments)
+    #print(json.dumps(result))
+    print(result)
+
+def main():
+    query = "what similarity laws must be obeyed when constructing aeroelastic models of heated high speed aircraft ."
+    start(query)
 
 if __name__ == "__main__":
     main()
