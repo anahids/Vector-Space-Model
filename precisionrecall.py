@@ -77,16 +77,18 @@ def calculateRecall(documents, queryRelevants):
         r.append(relevantRetrieved/relevant)
     return r
 
+# Plot of the average of the 10 queries
 def plottingAverage(recallAverage, precisionAverage):
     f = figure(11)
     plot(recallAverage, precisionAverage, color='green')
     xlabel('Recall')
     ylabel('Precision')
     title('Average of 10 queries')
-    savefig('average.png',dpi=300)
+    savefig('average.png')
     return f
     #show()
 
+# Plots of each query
 def plottingQueries(recall, precision):
     colours=['r','b','c','m','y','r','b','c','m','y']
     r = []
@@ -119,6 +121,7 @@ def start():
     averagePlot = plottingAverage(recallAverage,precisionAverage) 
     queriesPlots = plottingQueries(recalls, precisions)
 
+    # Create a Pdf to save all the figures
     pdf = PdfPages('queries.pdf')
     queriesPlots.append(averagePlot)
     for figure in queriesPlots:
