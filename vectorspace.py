@@ -8,7 +8,7 @@ def processQuery(query):
     return letters.split()
 
 def processDocuments():
-    with open('ejemplo.all.1400','r') as file:
+    with open('cran.all.1400','r') as file:
         docs = file.read().split('\n.I')
     return docs
 
@@ -136,12 +136,13 @@ def start(query):
     rank = ranking(queryVector, docsVectors)
     titlesDocuments = getAndCleanTitles(docs)
     result = formattingResult(rank, titlesDocuments, contentsDocuments)
-    #print(json.dumps(result))
-    print(result)
+    #print(result)
+    return result
 
 def main():
     query = "what similarity laws must be obeyed when constructing aeroelastic models of heated high speed aircraft ."
     start(query)
+
 
 if __name__ == "__main__":
     main()
